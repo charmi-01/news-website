@@ -6,21 +6,22 @@ import image3 from "../assets/image3.jpeg"
 import image4 from "../assets/image4.jpeg"
 import image5 from "../assets/image5.jpeg"
 import { NewsData } from '../assets/Newsdata'
-import SEO from './SEO'
+import { Helmet } from 'react-helmet-async'
 
 const images = [image1, image2, image3, image4, image5]
 
 const Home = () => {
   return (
     <div className=" card-group row row-cols-1 row-cols-md-2 g-4 p-5 ">
+      <Helmet>
+        <title>NEWS website</title>
+            <meta name="description" content="latest news about bitcoins"/>
+            <meta name="keywords" content="bitcoin, PayPal , BitCoin in new bill,Microstrategy,Bitcoin Miners"/>
+      </Helmet>
       {NewsData.map((news, index) => {
         const { number, heading, description } = news
         return (
           <div key={index} className="col">
-            <SEO title={heading}
-            description={description}
-            name=" bitcoins"
-            type="article"/>
             <div className="card  h-100">
               <img src={images[index]} height="250" weight="100%" className="card-img-top " alt="..." />
               <div className="card-body">
