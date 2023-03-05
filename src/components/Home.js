@@ -29,7 +29,7 @@ const Home = () => {
                 <p className="card-text">{description}</p>
               </div>
               <div className="card-footer">
-                <Link className="btn btn-primary" to={`${index}`} type="button">VIEW MORE</Link>
+                <Link className="btn btn-primary" to={`/news-website/${index}`} type="button">VIEW MORE</Link>
               </div>
             </div>
           </div>

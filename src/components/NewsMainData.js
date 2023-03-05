@@ -12,31 +12,35 @@ const images = [image1, image2, image3, image4, image5]
 
 
 const NewsMainData = () => {
-    const { id }= useParams()
-    //console.log(id);
-    const Id=parseInt(id)
-    //console.log(Id);
-  return (
-    <>
-    <SEO title={NewsData[Id].heading}
-            description={NewsData[Id].description}
-            name=" bit coins"
-            type="article"/>
-    <div className="card black p-5">
-    <div className="card-header text-center">
-       <h2><b> {NewsData[Id].heading}</b></h2>
-    </div>
-    <img src={images[Id]} height="300" weight="100%" className="card-img-top " alt="..." />
-    <div className="card-body">
-        <h4 className="card-title">{NewsData[Id].description}</h4>
-        <p>{NewsData[Id].content}</p>
-    </div>
-    <div className="card-footer text-muted">
-        2 days ago
-    </div>
-</div>
-    </>
-  )
+  const { id } = useParams()
+  console.log(id);
+  const Id = parseInt(id)
+  //console.log(Id);
+  if (id){
+    return (
+      <div>
+        <SEO title={NewsData[Id].heading}
+          description={NewsData[Id].description}
+          name=" bit coins"
+          type="article" />
+        <div className="card black p-5">
+          <div className="card-header text-center">
+            <h2><b> {NewsData[Id].heading}</b></h2>
+          </div>
+          <img src={images[Id]} height="300" weight="100%" className="card-img-top " alt="..." />
+          <div className="card-body">
+            <h4 className="card-title">{NewsData[Id].description}</h4>
+            <p>{NewsData[Id].content}</p>
+          </div>
+          <div className="card-footer text-muted">
+            2 days ago
+          </div>
+        </div>
+      </div>
+    )
+  }else{
+    return <></>
+  }
 }
 
 export default NewsMainData

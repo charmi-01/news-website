@@ -12,11 +12,10 @@ function App() {
 
       <Header/>
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path=":id" element={<NewsMainData/>}/>
+        <Route path='/news-website' element={<Home/>}/>
+        <Route path="/news-website/:id" element={<NewsMainData/>}/>
       </Routes>
       </HelmetProvider>
-      
       </BrowserRouter>
     </div>
   );
