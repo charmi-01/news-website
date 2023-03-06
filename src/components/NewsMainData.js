@@ -13,7 +13,7 @@ const images = [image1, image2, image3, image4, image5]
 
 const NewsMainData = () => {
   const { id } = useParams()
-  console.log(id);
+  console.log("asdfasd",id);
   const Id = parseInt(id)
   //console.log(Id);
   if (id){
