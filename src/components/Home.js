@@ -5,7 +5,7 @@ import image2 from "../assets/image2.jpeg"
 import image3 from "../assets/image3.jpeg"
 import image4 from "../assets/image4.jpeg"
 import image5 from "../assets/image5.jpeg"
-import { NewsData } from '../assets/Newsdata'
+import { NewsData } from './Newsdata'
 import { Helmet } from 'react-helmet-async'
 
 const images = [image1, image2, image3, image4, image5]
@@ -29,7 +29,7 @@ const Home = () => {
                 <p className="card-text">{description}</p>
               </div>
               <div className="card-footer">
-                <Link className="btn btn-primary" to={`/news-website/${index}`} type="button">VIEW MORE</Link>
+                <Link className="btn btn-primary" to={`/${index}`} type="button">VIEW MORE</Link>
               </div>
             </div>
           </div>
